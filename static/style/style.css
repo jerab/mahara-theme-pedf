@@ -33,7 +33,7 @@ a.small-logo:hover,
 
 #site-logo {
     visibility: hidden;
-    height: 75px !important;
+    height: 100px !important;
 }
 
 #top-wrapper {
@@ -78,7 +78,7 @@ a.small-logo:hover,
     min-height: 0px;
 }
 
-#micro #top-wrapper .viewheader.top {
+#micro #top-wrapper .viewheadertop {
     background-image: url(../images/header-micro-right.png);
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -87,46 +87,42 @@ a.small-logo:hover,
     padding: 5px 10px 0px 10px;
 }
 
-#micro #top-wrapper .viewheader .links {
+#micro #top-wrapper .viewheadertop .links {
     padding: 10px 10px 0 .5em;
 }
 
-#micro #top-wrapper .viewheader .links a:link,
-#micro #top-wrapper .viewheader .links a:active,
-#micro #top-wrapper .viewheader .links a:visited {
-    color: white;
+#micro #top-wrapper .viewheadertop .links a:link,
+#micro #top-wrapper .viewheadertop .links a:active,
+#micro #top-wrapper .viewheadertop .links a:visited {
+    color: #333;
     border: none;
 }
 
-#micro #top-wrapper .viewheader .links a:hover {
-    color: #ddd;
-}
-
-#micro #top-wrapper .viewheader #mainnav-container {
-  padding: 10px .5em .5em 155px;
-  * padding: 10px .5em .5em 65px;
+#micro #top-wrapper .viewheadertop #mainnav-container {
+  padding: 13px .5em .5em 155px;
+  * padding: 13px .5em .5em 65px;
   background: url(../images/icon_fieldset_left.gif) no-repeat 160px center;
   * background: url(../images/icon_fieldset_left.gif) no-repeat 5px center;
 }
 
-#micro #top-wrapper .viewheader #mainnav-container #mainnav {
+#micro #top-wrapper .viewheadertop #mainnav-container #mainnav {
     padding-left: 30px;
 }
 
-#micro #top-wrapper .viewheader #mainnav-container #mainnav a:link,
-#micro #top-wrapper .viewheader #mainnav-container #mainnav a:visited,
-#micro #top-wrapper .viewheader #mainnav-container #mainnav a:active {
+#micro #top-wrapper .viewheadertop #mainnav-container #mainnav a:link,
+#micro #top-wrapper .viewheadertop #mainnav-container #mainnav a:visited,
+#micro #top-wrapper .viewheadertop #mainnav-container #mainnav a:active {
     color: white;
     border: none;
 }
 
-#micro #top-wrapper .viewheader #mainnav-container #mainnav a:hover {
+#micro #top-wrapper .viewheadertop #mainnav-container #mainnav a:hover {
     color: #ddd;
 }
 
 #micro #top-wrapper .viewheader .title {
     color: #333;
-    padding-top: 0px;
+    padding-top: 20px;
 }
 
 #micro #top-wrapper .viewheader .title a:link,
@@ -145,8 +141,7 @@ a.small-logo:hover,
 }
 
 #main-nav li {
-    padding-top: 2px;
-    font-size: 125%;
+    font-size: 100%;
     font-weight: bold;
 }
 
@@ -155,6 +150,7 @@ a.small-logo:hover,
 #main-nav li a:visited,
 #main-nav li a:hover {
     border: none;
+    padding: 2px 10px;
 }
 
 #main-nav li.selected {
