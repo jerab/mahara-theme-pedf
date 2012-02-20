@@ -45,6 +45,7 @@ a.small-logo:hover,
     margin: 0px;
     padding: 0px;
     min-height: 125px;
+    position: relative;
 }
 
 #header-right {
@@ -54,6 +55,9 @@ a.small-logo:hover,
     background-attachment: scroll;
     background-position: top left;
     min-width: 246px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 #header-right a:link,
