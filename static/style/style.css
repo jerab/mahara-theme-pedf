@@ -58,6 +58,8 @@ a.small-logo:hover,
     position: absolute;
     top: 0px;
     right: 0px;
+    padding-left: 25px;
+    min-height: 40px;
 }
 
 #header-right a:link,
@@ -190,6 +192,10 @@ a.small-logo:hover,
     color: white;
 }
 
+td.main-column {
+	width: auto;
+}
+
 #footer-wrap {
     background-color: transparent;
     border-top: 1px solid #eee;
@@ -248,5 +254,10 @@ div.sideblock h3 {
 div.sidebar-content,
 div.sideblock-content {
     margin: 5px;
+}
+
+#loginform_container #login_login_container {
+	padding: 0;
+	background: none;
 }
 

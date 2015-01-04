@@ -1,16 +1,23 @@
-{if $GROUP}
-                        </div><!--end group-->
+{if $SUBPAGENAV}
+                        </div><!--end subpage rel-->
 {/if}
-                    </div>
-                </td>
+                    </div><!-- end main-column-container -->
+                    <div class="cl"></div>
+                </div><!-- end main-column -->
 {if $SIDEBARS && $SIDEBLOCKS.right}
-                <td id="right-column" class="sidebar">
+                <div id="right-column" class="sidebar">
 {include file="sidebar.tpl" blocks=$SIDEBLOCKS.right}
-                </td>
+                </div>
 {/if}
-            </tr>
-        </tbody>
-    </table>
+{if $SIDEBARS && $SIDEBLOCKS.left}
+                <div id="left-column" class="sidebar">
+{include file="sidebar.tpl" blocks=$SIDEBLOCKS.left}
+                </div>
+{/if}
+				<div class="cb"></div>
+        </div><!-- main-wrapper -->
+    </div><!-- mainmiddle -->
+    </div><!-- mainmiddlewrap -->
     <div id="footer-wrap">
         <div id="powered-by">
             <a id="powered-by-mahara" href="http://mahara.org/"><img src="{theme_url filename='images/powered-by-mahara.png'}" border="0" alt="Mahara"></a>

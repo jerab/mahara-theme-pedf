@@ -7,29 +7,31 @@
 <div id="container">
     <div id="loading-box"></div>
     <div id="top-wrapper">
-        <h1 id="site-logo">E-portfolio - Univerzita Karlova v Praze, Pedagogick√° fakulta</h1>
+        <h1 id="site-logo">E-portfolio - Univerzita Karlova v Praze, Pedagogick· fakulta</h1>
 {include file="header/topright.tpl"}
 {include file="header/navigation.tpl"}
 		<div class="cb"></div>
     </div>
-    <table id="main-wrapper">
-        <tbody>
-            <tr>
-{if $SIDEBARS && $SIDEBLOCKS.left}
-                <td id="left-column" class="sidebar">
-{include file="sidebar.tpl" blocks=$SIDEBLOCKS.left}
-                </td>
-{/if}
-                <td id="main-column" class="main-column">
-                    {dynamic}{insert_messages}{/dynamic}
+    <div id="mainmiddlewrap">
+        <div id="mainmiddle">
+            <div id="{if $SIDEBARS}{if $SIDEBLOCKS.right}main-wrapper-narrow-right{else}main-wrapper-narrow-left{/if}{else}main-wrapper{/if}">
+                    <div id="main-column" class="main-column{if $SIDEBARS} main-column-narrow{/if}{if $selected == 'content'} editcontent{/if}">
                     <div id="main-column-container">
-
-{if isset($PAGEHEADING)}                    <h1>{$PAGEHEADING}{if $PAGEHELPNAME}<span class="page-help-icon">{$PAGEHELPICON|safe}</span>{/if}</h1>
+                        {dynamic}{insert_messages}{/dynamic}
+{if isset($PAGEHEADING)}
+                       <h1>{$PAGEHEADING}{if $PAGEHELPNAME}<span class="page-help-icon">{$PAGEHELPICON|safe}</span>{/if}</h1>
 {/if}
-{if $SUBPAGENAV}{* Tabs and beginning of page container for group info pages *}                        <ul class="in-page-tabs">
+
+{if $SUBPAGENAV}{if $SUBPAGETOP}
+                       {include file=$SUBPAGETOP}
+{/if}
+{* Tabs and beginning of page container for group info pages *}
+                       <div class="tabswrap">
+                           <ul class="in-page-tabs">
 {foreach from=$SUBPAGENAV item=item}
-                            <li><a {if $item.selected}class="current-tab" {/if}href="{$WWWROOT}{$item.url}">{$item.title}</a></li>
+                               <li {if $item.selected}class="current-tab"{/if}><a {if $item.selected}class="current-tab" {/if}href="{$WWWROOT}{$item.url}">{$item.title}<span class="accessible-hidden">({str tag=tab}{if $item.selected} {str tag=selected}{/if})</span></a></li>
 {/foreach}
-                        </ul>
-                        <div class="subpage rel">
+                           </ul>
+                       </div>
+                        <div class="subpage">
 {/if}
