@@ -33,12 +33,12 @@ a.small-logo:hover,
 
 #site-logo {
     visibility: hidden;
-    height: 100px !important;
+    height: 85px !important;
 }
 
 #top-wrapper {
-    background-color: #dea54b;
-    background-image: url(../images/header.png);
+    /*background-color: #dea54b;*/
+    background-image: url(../images/header-transparent.png);
     background-repeat: no-repeat;
     background-attachment: scroll;
     border: none;
@@ -139,7 +139,8 @@ a.small-logo:hover,
 }
 
 #main-nav {
-    padding-left: 170px;
+    /*padding-left: 40px;*/
+    background: none;
 }
 
 #main-nav li {
@@ -152,23 +153,33 @@ a.small-logo:hover,
 #main-nav li a:visited,
 #main-nav li a:hover {
     border: none;
-    padding: 2px 10px;
+    padding: 5px 10px;
 }
 
 #main-nav li.selected {
-    background: #dea54b;
+    background: none;
 }
 
 #main-nav li.selected a:link,
 #main-nav li.selected a:active,
-#main-nav li.selected a:visited,
+#main-nav li.selected a:visited {
+	background: none;
+    color: #000;
+}
+
+#main-nav li a:hover,
 #main-nav li.selected a:hover {
-    color: white;
+    background: none;
+    color: #882626;
+}
+
+#nav, 
+#sub-nav ul {	
+	margin: 0 0 0 140px;
 }
 
 #sub-nav {
-    background-color: #dea54b;
-    padding-left: 170px;
+    background-color: #dea54b;    
 }
 
 #sub-nav li {
@@ -196,10 +207,22 @@ td.main-column {
 	width: auto;
 }
 
+
+#mainmiddle {
+	margin: 0 0 0 130px;
+}
+
+
 #footer-wrap {
     background-color: transparent;
     border-top: 1px solid #eee;
-    color: #333;
+    color: #333;    
+}
+
+#footer-inner-wrap {
+	margin: 0 auto;
+	max-width: 600px;
+	text-align: center;	
 }
 
 #micro #footer-wrap {
@@ -218,12 +241,20 @@ td.main-column {
     color: #999;
 }
 
+#powered-by {
+	float: none;
+}
+
 #powered-by a {
-    margin-right: 1em;
+    margin-right: 1em;    
 }
 
 #powered-by-umimto img {
-    margin-bottom: 6px;
+    /*margin-bottom: 6px;*/
+}
+
+#footernav {
+	margin-bottom: 10px;
 }
 
 div.sideblock {
@@ -246,9 +277,9 @@ div.sideblock a:hover {
 }
 
 div.sideblock h3 {
-    background-color: #eec686;
+    /*background-color: #eec686;*/
     margin: 0px;
-    padding: 3px 1em;
+    padding: 3px 1em 3px 0;
 }
 
 div.sidebar-content,
@@ -259,5 +290,20 @@ div.sideblock-content {
 #loginform_container #login_login_container {
 	padding: 0;
 	background: none;
+}
+
+ul.in-page-tabs li a.current-tab,
+ul.in-page-tabs li a.current-tab:link,
+ul.in-page-tabs li a.current-tab:visited,
+ul.in-page-tabs li a.current-tab:active
+/*ul.in-page-tabs li input.current-tab,
+ul.in-page-tabs li button.current-tab*/ {
+	border-bottom: none;
+	background-color: #dfdfdf;
+}
+
+
+#sb-onlineusers li {
+	white-space: normal;
 }
 
